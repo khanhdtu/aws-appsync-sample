@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+}
+
+.hydrated form {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.fx-center {
+  display: flex;
+  align-items: center;
+}
+
+.fx-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

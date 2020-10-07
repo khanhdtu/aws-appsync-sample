@@ -1,0 +1,114 @@
+.chat-room-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.chat-room-header span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.chat-room-header button {
+  position: absolute;
+  right: 0;
+}
+
+.chat-room-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.chat-room-container .messages {
+  width: 70%;
+  height: 100%;
+  border: 1px solid silver;
+  border-radius: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.chat-room-container .messages .messages-input {
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-room-container .messages-input input {
+  width: 300px;
+}
+
+.chat-room-container .users {
+  width: 30%;
+  height: 100%;
+  border: 1px solid silver;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.user-in-chat-label {
+  margin-bottom: 20px;
+}
+
+.user-in-chat {
+  position: relative;
+  border-bottom: 1px solid silver;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.user-in-chat .username {
+  font-weight: 600;
+}
+
+.user-in-chat .username.you {
+  color: darkorange;
+}
+
+.online-status {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 15px;
+  left: 0;
+  position: absolute;
+}
+
+.online-status.online {
+  background-color: green;
+}
+
+.online-status.offline {
+  background-color: silver;
+}
+
+.messages-released {
+  overflow: scroll;
+  height: 100%;
+}
+
+.messages-released-item {
+  margin-bottom: 5px;
+}
+
+
+.messages-released-item .msr-item {
+  width: 450px;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.messages-released-item .username {
+  width: 120px;
+  padding-left: 10px;
+}
+
+.messages-released-item .message {
+  width: calc(100% - 120px);
+}
+
+.messages-released-item .message .created {
+  font-size: 10px;
+  font-style: italic;
+}

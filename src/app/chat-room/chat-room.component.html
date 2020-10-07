@@ -1,0 +1,49 @@
+<div id="chat-room">
+  <div class="chat-room-header">
+    <h4>Hello {{ user?.name }}!</h4>
+    <span>Welcome to join SOCRATES's chat room</span>
+    <button pButton type="button" label="SIGN OUT" class="p-button-rounded p-button-secondary" (click)="outRoom()"></button>
+  </div>
+  <div class="chat-room-container p-d-flex">
+    <div class="messages">
+      <div class="messages-input">
+        <input
+          id="float-input"
+          type="text"
+          pInputText
+          placeholder="Typing here ..."
+          [(ngModel)]="message"
+          (keyup.enter)="onTypingChat($event)">
+      </div>
+      <div class="messages-released">
+        <ng-container *ngIf="(messages | async) as items">
+          <div class="messages-released-item p-d-flex p-ai-center p-jc-center" *ngFor="let item of items | sort">
+            <div class="msr-item p-d-flex" style="width: 450px;">
+                <div class="username p-d-flex p-ai-center">
+                  <span>{{ item?._user?.name }}:</span>
+                </div>
+                <div class="message">
+                  <div class="value">{{ item.message }}</div>
+                  <div class="created">{{ item.createdAt | amTimeAgo }}</div>
+                </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="users">
+      <div class="user-in-chat-label center">Users in the conversation</div>
+      <ng-container *ngIf="(users | async) as _users">
+        <div *ngFor="let _user of _users" class="user-in-chat p-d-flex p-ai-center">
+          <span class="online-status online" *ngIf="_user.online === 'ONLINE'"></span>
+          <span class="online-status offline" *ngIf="_user.online !== 'ONLINE'"></span>
+          <span class="username {{ user.name === _user.name ? 'you' : '' }}">
+            {{ _user.name === user.name ? 'You' : _user.name}}
+          </span>
+          <span class="status-connected" *ngIf="_user.online === 'ONLINE'">&nbsp;is connected !</span>
+          <span class="status-disconnected" *ngIf="_user.online !== 'ONLINE'">&nbsp;is disconnected !</span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

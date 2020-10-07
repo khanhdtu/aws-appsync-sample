@@ -1,0 +1,22 @@
+<div class="funny-app p-d-flex p-flex-column p-jc-center p-ai-center" *ngIf="!(currentUser | async); else chat">
+  <h5>Put your name to start chat with us!</h5>
+  <div class="p-grid p-fluid">
+    <div class="">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input type="text" [(ngModel)]="username" pInputText placeholder="Your name">
+      </div>
+    </div>
+
+    <div class="">
+      <div class="p-inputgroup">
+        <p-button label="Go" (onClick)="onClick()"></p-button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<ng-template #chat>
+  <app-chat-room [username]="username"></app-chat-room>
+</ng-template>

@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-graphqlngx-dev-94217-authRole",
+      "UnauthRoleArn": "arn:aws:iam::330477736997:role/amplify-graphqlngx-dev-94217-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::330477736997:role/amplify-graphqlngx-dev-94217-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-graphqlngx-dev-94217-deployment",
+      "UnauthRoleName": "amplify-graphqlngx-dev-94217-unauthRole",
+      "StackName": "amplify-graphqlngx-dev-94217",
+      "StackId": "arn:aws:cloudformation:us-east-1:330477736997:stack/amplify-graphqlngx-dev-94217/30bb17c0-0847-11eb-bbe3-0a035b49661f",
+      "AmplifyAppId": "d10uwlvjotzc3m"
+    }
+  }
+}
