@@ -60,6 +60,7 @@ export const listMessages = /* GraphQL */ `
         message
         createdAt
         updatedAt
+        _user { name }
       }
       nextToken
     }
